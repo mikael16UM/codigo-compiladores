@@ -1,0 +1,12 @@
+alfabeto: a b
+Postfija: a b & *
+    Tabla
+    0 a 1
+    1 b 3
+    4 @ 5
+    4 @ 0
+    3 @ 0
+    3 @ 5
+AFN
+n 5
+n 4
