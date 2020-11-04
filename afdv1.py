@@ -1,6 +1,14 @@
 #!/usr/bin/env python
 #-*-coding utf:-8-*-
 
+class subconjunto :
+    def __init__ (self, lista, marca, abc):
+        self.lista = lista
+        self.marca = marca
+        self.costo = costo
+    def show (self):
+        print (self.lista, self.marca, self.costo)
+
 class transicion:
     def __init__ (self, origin, destiny, cost):
         self.origin = origin
@@ -8,7 +16,6 @@ class transicion:
         self.cost = cost
     def show (self):
         print (self.origin, self.destiny, self.cost) 
-
 
 def main (args):
 
@@ -47,7 +54,7 @@ def calculo_cerradura( lista, listaT, cerradura):
                         pila.append(i.destiny)
                         cerradura.append(i.destiny)
 
-	
+
 if __name__ == '__main__':
 	import sys
 	sys.exit (main(sys.argv))
