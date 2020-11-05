@@ -8,7 +8,7 @@ class subconjunto :
     def show (self):
         print (self.lista, self.marca)
     def __repr__ (self):
-        return str (self.lista) + ", " + str(self.marca) 
+        return str (self.lista)  
 
 class tranSub :
     def __init__ (self, origen, destino, costo):
@@ -40,8 +40,10 @@ def main (args):
     resultado = calculo_subconjunto (listaT, alfabeto)
     #print (resultado[0].origen)
 
+  #  print (resultado[0])
+
     for i in resultado:
-        print (i.__repr__())
+        print (i.__repr__)
     return 0
 
 def existe (lista, elemento):
@@ -83,15 +85,14 @@ def pertenece (lista, estados):
 
 def calculo_cerradura( lista, listaT):
 
-    lista = [1]
-    listaT = []
-    listaT.append (transicion (1, 2, "@"))
-    listaT.append (transicion (2, 3, "a"))
-    listaT.append (transicion(3, 4, "@"))
     #iniciar la pila y cerradura
     # cerradura es una lista vacía 
-    pila = lista
-    cerradura = pila
+    pila = []
+    cerradura = []
+    for i in lista :
+        pila.append (i)
+        cerradura.append (i)
+
 
     while (len(pila) != 0):
         a = pila.pop()
@@ -104,11 +105,7 @@ def calculo_cerradura( lista, listaT):
     return cerradura
 
 def calculo_subconjunto (listaT, alfabeto):
-    listaT = []
-    alfabeto = ["a"]
-    listaT.append (transicion (1, 2, "@"))
-    listaT.append (transicion (2, 3, "a"))
-    listaT.append (transicion(3, 4, "@"))
+
     a = []
     a.append (listaT[0].origin) 
     cerradura = []
