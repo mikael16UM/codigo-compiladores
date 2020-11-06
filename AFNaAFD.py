@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #-*-coding utf:-8-*-
-
+import os
 class subconjunto :
     def __init__ (self, lista, marca):
         self.lista = lista
@@ -55,6 +55,7 @@ def main (args):
         if (len (i.origen) > 0 and vacia (i.destino) != 0):
             #vacia (i.destino)
             print ( i.origen, "--", i.costo, "-->", i.destino)
+    os.system ("PAUSE")
     return 0
 
 def vacia (listas):
